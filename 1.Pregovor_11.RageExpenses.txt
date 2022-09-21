@@ -1,0 +1,30 @@
+package t6Exercise;
+
+import java.util.Scanner;
+
+public class P11RageExpenses {
+
+	public static void main(String[] args) {
+
+		Scanner scan = new Scanner(System.in);
+		
+		int lostGames = Integer.parseInt(scan.nextLine());
+		double headsetPrice = Double.parseDouble(scan.nextLine());
+		double mousePrice = Double.parseDouble(scan.nextLine());
+		double keyboardPrice = Double.parseDouble(scan.nextLine());
+		double displayPrice = Double.parseDouble(scan.nextLine());
+		
+		int countHeadset = lostGames/2;
+		int countMouse = lostGames/3;
+		int countKeyboard = lostGames/6;
+		int countDisplay = lostGames/12;
+		
+		double finalSum = (countHeadset*headsetPrice)+
+				(countDisplay*displayPrice)+
+				(countKeyboard*keyboardPrice)+
+				(countMouse*mousePrice);
+		
+		System.out.printf("Rage expenses: %.2f lv.",finalSum);
+	}
+
+}
