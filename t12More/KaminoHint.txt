@@ -1,0 +1,7 @@
+Условие: , split by "!" (one or several).
+
+Решение:
+
+String sequence = input.replaceAll("!+"," ");
+	
+int[] arrCurrent = Arrays.stream(sequence.split(" ")).mapToInt(Integer::parseInt).toArray();
